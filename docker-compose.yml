@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  database:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: dockerSpringDatabase
+      MYSQL_USER: trinhvo
+      MYSQL_PASSWORD: trinhvo
+    ports:
+      - 3307:3307
+    volumes:
+      - /data/mysql
+    networks:
+      - backendNetwork
+     
+  springapi:
+    image: springapi
+    build:
+        context: ./SpringBootApp
+        # dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - database
+    volumes:
+      - /data/spring-boot-app
+    networks:
+      - backendNetwork
+      
+networks:
+  backendNetwork:

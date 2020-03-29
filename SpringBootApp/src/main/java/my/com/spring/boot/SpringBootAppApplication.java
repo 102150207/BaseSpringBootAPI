@@ -16,7 +16,6 @@ import java.util.TimeZone;
         Jsr310JpaConverters.class
 })
 public class SpringBootAppApplication {
-    @SuppressWarnings("unused")
     private static final Logger logger = LogManager.getLogger(SpringBootAppApplication.class);
 
     @PostConstruct

@@ -8,10 +8,13 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>my.com.base</groupId>
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SpringBootApp</name>
+    <packaging>jar</packaging>
+
+    <name>demo</name>
     <description>Base for Spring Boot Application</description>
 
     <properties>
